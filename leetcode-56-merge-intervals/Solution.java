@@ -73,6 +73,8 @@ public class Solution {
 
     }
 
+    // t: O(n) + O(n.logn) = O(n.logn)
+    // s: O(n) + O(1)
     public static int[][] merge(int[][] intervals) {
 
         if(intervals.length == 0) return new int[0][0];
@@ -81,11 +83,10 @@ public class Solution {
 
         List<int[]> resList = new ArrayList<int[]>(); // s: O(n)
 
-
-        int prevStart = intervals[0][0], prevEnd = intervals[0][1];
+        int prevStart = intervals[0][0], prevEnd = intervals[0][1]; // s: O(1)
 
         int[] curr = new int[2];
-        for(int i = 1; i < intervals.length; i++){ // t: O(n) + O(n.logn), s: O(1)
+        for(int i = 1; i < intervals.length; i++){ // t: O(n)
 
             curr[0] = intervals[i][0];
             curr[1] = intervals[i][1];
@@ -111,12 +112,3 @@ public class Solution {
         return res;
     }
 }
-
-//    int i = 0;
-//        while(i < intervals.length){
-//        List<Integer> interval = new ArrayList<Integer>();
-//        interval.add(intervals[i][0]);
-//        interval.add(intervals[i][1]);
-//        resList.add(interval);
-//        i++;
-//        }
