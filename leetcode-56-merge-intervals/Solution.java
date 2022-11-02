@@ -29,7 +29,7 @@ public class Solution {
         int[][] ex1Input = new int[][]{{1,3},{2,6},{8,10},{15,18}};
         int[][] ex1ExpectedRes = new int[][]{{1,6},{8,10},{15,18}};
         int[][] ex1Res;
-        System.out.println("Expected result: ");
+        System.out.println("\nExpected result: ");
         for(int[] interval: ex1ExpectedRes) {
             System.out.printf("[%d, %d]\n", interval[0], interval[1]);
         }
@@ -44,7 +44,7 @@ public class Solution {
         int[][] ex2Input = new int[][]{{1,4},{1,5}};
         int[][] ex2ExpectedRes = new int[][]{{1,5}};
         int[][] ex2Res;
-        System.out.println("Expected result: ");
+        System.out.println("\nExpected result: ");
         for(int[] interval: ex2ExpectedRes) {
             System.out.printf("[%d, %d]\n", interval[0], interval[1]);
         }
@@ -59,7 +59,7 @@ public class Solution {
         int[][] ex3Input = new int[][]{{1,4},{1,4}};
         int[][] ex3ExpectedRes = new int[][]{{1,4}};
         int[][] ex3Res;
-        System.out.println("Expected result: ");
+        System.out.println("\nExpected result: ");
         for(int[] interval: ex3ExpectedRes) {
             System.out.printf("[%d, %d]\n", interval[0], interval[1]);
         }
@@ -77,56 +77,35 @@ public class Solution {
 
         if(intervals.length == 0) return new int[0][0];
 
-        Arrays.sort(intervals, new Comparator<int[]>(){
+        Arrays.sort(intervals, (first, second) -> first[0] - second[0]); // t: O(nlogn)
 
-            @Override
-            public int compare(int[] first, int[] second){
-                if(first[0] > second[0]){
-                    return 1;
-                } else if (first[0] < second[0]){
-                    return -1;
-                } else {
-                    return 0;
-                }
+        List<int[]> resList = new ArrayList<int[]>(); // s: O(n)
+
+
+        int prevStart = intervals[0][0], prevEnd = intervals[0][1];
+
+        int[] curr = new int[2];
+        for(int i = 1; i < intervals.length; i++){ // t: O(n) + O(n.logn), s: O(1)
+
+            curr[0] = intervals[i][0];
+            curr[1] = intervals[i][1];
+
+            if(prevEnd < curr[0]){
+                resList.add(new int[]{prevStart, prevEnd});
+                prevStart = curr[0];
             }
 
-        });
+            prevEnd = Integer.max(prevEnd, curr[1]);
 
-
-        List<List<Integer>> resList = new ArrayList<List<Integer>>();
-
-        Stack<List<Integer>> stack = new Stack<List<Integer>>();
-
-        List<Integer> interval = new ArrayList<Integer>();
-        List<Integer> curr = new ArrayList<Integer>();
-        curr = Arrays.asList(intervals[0][0], intervals[0][1]);
-        stack.push(curr);
-        int i = 1;
-        while(!stack.isEmpty() && i < intervals.length){ // t: O(n) + O(n.logn), s: O(1)
-
-            interval = stack.pop();
-            curr = Arrays.asList(intervals[i][0], intervals[i][1]);
-
-            if(interval.get(1) < curr.get(0)){
-                resList.add(interval);
-                stack.push(curr);
-                i++;
-            } else{
-                List<Integer> newMerged = Arrays.asList(interval.get(0), Integer.max(curr.get(1), interval.get(1)));
-                System.out.println(newMerged.toString());
-                stack.push(newMerged);
-                i++;
-            }
         }
 
-        if(!stack.isEmpty()) {
-            resList.add(stack.pop());
-        }
+        resList.add(new int[]{prevStart, prevEnd}); // last remaining interval
 
-        int[][] res = new int[resList.size()][2];
+
+        int[][] res = new int[resList.size()][2]; // just transforming solution as we don't know the res array size
         for(int k = 0; k < resList.size(); k++){
-            res[k][0] = resList.get(k).get(0);
-            res[k][1] = resList.get(k).get(1);
+            res[k][0] = resList.get(k)[0];
+            res[k][1] = resList.get(k)[1];
         }
 
         return res;
