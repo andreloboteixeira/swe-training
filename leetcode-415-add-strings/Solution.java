@@ -55,34 +55,26 @@ public class Solution{
 
     public static String addStrings(String num1, String num2) {
 
-        int first = 0;
-        int second = 0;
+        StringBuilder res = new StringBuilder();
+
+        int c1 = 0;
+        int c2 = 0;
         int sum = 0;
-        String res = "";
-
-        num1 = new StringBuilder(num1).reverse().toString();
-        num2 = new StringBuilder(num2).reverse().toString();
+        int currDigit = 0;
         int carry = 0;
-        int digit = 0;
-        for(int i = 0; i < num1.length() || i < num2.length(); i++){
-            int c1 = 0;
-            int c2 = 0;
+        for(int i = num1.length() - 1, j = num2.length() - 1; i >= 0 || j >= 0 || carry == 1; i--, j--){
 
-            if(i < num1.length()){
-                c1 = num1.charAt(i) - '0';
-            }
-            if(i < num2.length()){
-                c2 = num2.charAt(i) - '0';
-            }
+            c1 = i >=0 ? num1.charAt(i) - '0' : 0;
+            c2 = j >=0 ? num2.charAt(j) - '0' : 0;
+
             sum = c1 + c2 + carry;
-            digit = sum%10;
             carry = sum/10;
+            currDigit = sum%10;
 
-            res = digit + res;
+            res.append(currDigit);
         }
-        if(carry != 0) res = carry + res;
 
-        return res;
+        return res.reverse().toString();
     }
 
 }
