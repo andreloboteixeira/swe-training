@@ -40,14 +40,9 @@ public class Solution{
         int counter = 0;
         boolean isThereOdd = false;
         for(int i = 0; i < freq.length; i++){
-            if(freq[i] != 0){
-                if(freq[i]%2 == 1){
-                    counter+= freq[i] - 1;
-                    isThereOdd = true;
-                } else {
-                    counter+= freq[i];
-                }
-            }
+            if(freq[i]%2 == 1) isThereOdd = true;
+
+            counter+= freq[i]/2 * 2;
         }
         if(isThereOdd) counter++;
 
