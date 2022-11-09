@@ -42,31 +42,22 @@ public class Solution{
 
     }
 
-    public static int bisearch(int[] arr, int target){
-        int start = 0, end = arr.length - 1, middle = 0;
-        while(start <= end){
-
-            middle = start + (end - start)/2;
-
-            if(arr[middle] == target){
-                return middle;
-            } else if(target < arr[middle]) {
-                end = middle - 1;
-            } else {
-                start = middle + 1;
-            }
-        }
-        return -1;
-    }
-
     // t: O(m.log n), s: O(1)
     public static boolean searchMatrix(int[][] matrix, int target) {
         int m = matrix.length, n = matrix[0].length;
 
-        for(int i = 0; i < m; i++){
-            int found = Solution.bisearch(matrix[i], target);
-            if(found != -1) return true;
+        int row = 0, col = n - 1;
+
+        while(row < m && col >= 0){
+            if(matrix[row][col] == target) return true;
+
+            if(target < matrix[row][col]){
+                col--;
+            } else {
+                row++;
+            }
         }
+
         return false;
 
     }
