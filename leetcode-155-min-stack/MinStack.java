@@ -1,47 +1,48 @@
-import java.util.ArrayList;
-import java.util.List;
+import java.util.Stack;
 
-// t: all operations are O(1) at cost of storing dynamic array and two integers for the last index, and min value O(1)
-// recomputing the min is done inside the pop operation O(N) (we might have removed the min value),
-// on the push it only takes O(1) as we already have the min
+// t: all operations are O(1), s: O(1)
+
+class Node{
+    int val;
+    int min;
+
+    public Node(int val, int min){
+        this.val = val;
+        this.min = min;
+    }
+}
 
 public class MinStack{
 
-    List<Integer> stack;
-    int lastIdx;
-    int minVal;
+    Stack<Node> stack;
 
     public MinStack(){
-        this.stack = new ArrayList<Integer>();
-        this.lastIdx = -1;
-        this.minVal = Integer.MAX_VALUE;
+        this.stack = new Stack<Node>();
     }
 
     public void push(int val){
-        this.stack.add(val);
-        this.lastIdx++;
-        this.minVal = Integer.min(this.minVal, val);
-    }
-
-    public void pop(){
-        this.stack.remove(lastIdx);
-        this.lastIdx--;
-        if(this.lastIdx > -1) {
-            this.minVal = this.stack.get(this.lastIdx);
+        if(stack.isEmpty()){
+            stack.push(new Node(val, val));
         } else {
-            this.minVal = Integer.MAX_VALUE;
-        }
-        for(int i = this.lastIdx - 1; i >= 0; i--){
-            this.minVal = Integer.min(this.minVal, this.stack.get(i));
+            stack.push(new Node(val, Integer.min(val, stack.peek().min)));
         }
     }
 
-    public int top(){
-        return this.stack.get(this.lastIdx);
+    public void pop() {
+        if(stack.isEmpty()) System.out.println("trying to pop, stack empty");
+
+        this.stack.pop();
     }
 
-    public int getMin(){
-        return this.minVal;
+    public int top() {
+        if(stack.isEmpty()) System.out.println("trying to get top, stack empty");
+
+        return this.stack.peek().val;
+    }
+
+    public int getMin() {
+        if(stack.isEmpty()) System.out.println("trying to get min value, stack empty");
+        return this.stack.peek().min;
     }
 
 }
