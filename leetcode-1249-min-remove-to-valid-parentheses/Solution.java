@@ -1,14 +1,5 @@
 import java.util.*;
 
-class Node {
-    char val;
-    int index;
-    public Node(char val, int index){
-        this.val = val;
-        this.index = index;
-    }
-}
-
 public class Solution{
 //    Given a string s of '(' , ')' and lowercase English characters.
 //
@@ -72,35 +63,33 @@ public class Solution{
     public static String minRemoveToMakeValid(String s) {
         char open = '(', closed = ')';
 
-        Stack<Node> stack = new Stack<Node>();
+        Stack<Integer> stackOpenIdx = new Stack<Integer>();
         Set<Integer> invalidIdx = new HashSet<Integer>();
-        String res = "";
+        StringBuilder res = new StringBuilder();
 
         for(int i = 0; i < s.length(); i++){
             char curChar = s.charAt(i);
 
-
             if(curChar == open){
-                stack.push(new Node(curChar, i));
+                stackOpenIdx.push(i);
             } else if(curChar == closed){
-                if(!stack.isEmpty() && stack.peek().val == open) {
-                    stack.pop();
+                if(!stackOpenIdx.isEmpty()) {
+                    stackOpenIdx.pop();
                 } else {
                     invalidIdx.add(i);
                 }
             }
         }
 
-        while(!stack.isEmpty()){
-            invalidIdx.add(stack.peek().index);
-            stack.pop();
+        while(!stackOpenIdx.isEmpty()){
+            invalidIdx.add(stackOpenIdx.peek());
+            stackOpenIdx.pop();
         }
 
         for(int i = 0; i < s.length(); i++){
-            if(!invalidIdx.contains(i)) res = res + s.charAt(i);
+            if(!invalidIdx.contains(i)) res.append(s.charAt(i));
         }
 
-        return res;
-
+        return res.toString();
     }
 }
