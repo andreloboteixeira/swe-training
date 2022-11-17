@@ -1,34 +1,39 @@
 import java.util.*;
 
-// t: O(n) to build the inorder, O(1) for each method by just accessing the array
-// s: O(n) to store the array and pointer
+// t: O(1) in average for next and hasNext, every node will be placed once in stack and next can be called n times.
+// Next has to push to the stack in case current visited node has right child
+// s: O(h) where h is the tree height, values stored in the stack
 class BSTIterator {
 
-    int pointer;
-    List<Integer> inorder;
+    Stack<TreeNode> iterativeDFS;
 
     public BSTIterator(TreeNode root) {
-        this.inorder = new ArrayList<Integer>();
-        this.buildInorderArray(root);
-        this.pointer = 0;
+        this.iterativeDFS = new Stack<TreeNode>();
+        this.pushAllLeft(root);
     }
 
-    public void buildInorderArray(TreeNode node){
-        if(node == null) return ;
-
-        this.buildInorderArray(node.left);
-        this.inorder.add(node.val);
-        this.buildInorderArray(node.right);
+    public void pushAllLeft(TreeNode node){
+        TreeNode curr = node;
+        while(curr != null) {
+            this.iterativeDFS.push(curr);
+            curr = curr.left;
+        }
     }
 
     public int next() {
-        int val = this.inorder.get(this.pointer);
-        this.pointer++;
-        return val;
+        int nextVal = 0;
+        if(!this.iterativeDFS.isEmpty()){
+            TreeNode curr = this.iterativeDFS.pop();
+            nextVal = curr.val;
+            if(curr.right != null){
+                this.pushAllLeft(curr.right);
+            }
+        }
+        return nextVal;
     }
 
     public boolean hasNext() {
-        return this.pointer < this.inorder.size();
+        return !this.iterativeDFS.isEmpty();
     }
 
 }
