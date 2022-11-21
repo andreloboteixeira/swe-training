@@ -71,46 +71,27 @@ public class Solution{
         System.out.println(Arrays.toString(ex6Res));
     }
 
-    // t: O(n) + O(n) => O(n), s: O(n)
+    // t: O(n), s: O(n)
     public static int[] sortedSquares(int[] nums) {
         int[] res = new int[nums.length];
 
-        int nonNegative = nums.length;
-        for(int i = 0; i < nums.length; i++){
-            if(nums[i] >= 0){
-                nonNegative = i;
-                break;
-            }
+        int start = 0, end = nums.length - 1;
+        int k = end;
 
-        }
-        int negative = nonNegative - 1;
-
-        int k = 0;
         int leftSquare = 0, rightSquare = 0;
-        while(k < nums.length && (negative >= 0 || nonNegative < nums.length)){
+        while(start <= end){
+            leftSquare = nums[start]*nums[start];
+            rightSquare = nums[end]*nums[end];
 
-            if(negative < 0) {
-                res[k] = nums[nonNegative] * nums[nonNegative];
-                nonNegative++;
-                k++;
-            } else if(nonNegative >= nums.length) {
-                res[k] = nums[negative] * nums[negative];
-                negative--;
-                k++;
+            if(leftSquare > rightSquare) {
+                res[k] = leftSquare;
+                k--;
+                start++;
             } else {
-                leftSquare = nums[negative]*nums[negative];
-                rightSquare = nums[nonNegative]*nums[nonNegative];
-
-                if(leftSquare < rightSquare){
-                    res[k] = leftSquare;
-                    k++;
-                    negative--;
-                } else {
-                    res[k] = rightSquare;
-                    k++;
-                    nonNegative++;
-                }
-            };
+                res[k] = rightSquare;
+                k--;
+                end--;
+            }
 
         }
 
