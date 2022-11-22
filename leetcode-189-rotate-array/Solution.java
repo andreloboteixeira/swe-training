@@ -36,33 +36,26 @@ public class Solution{
 
     }
 
-    // O(n) to copy to left and right + O(n) copy again to original, s: O(n)
+    // reversing 3 times O(n) => O(n) , s: O(1)
     public static void rotate(int[] nums, int k) {
         k = k % nums.length;
         if(k == 0) return ;
 
-        int mid = nums.length - k;
-        int j = 0;
-
-        int [] right = new int[k];
-        for(int i = mid; i < nums.length; i++) {
-            right[j++] = nums[i];
-        }
-
-        j = 0;
-        int [] left = new int[nums.length - k];
-        for(int i = 0; i < mid; i++) {
-            left[j++] = nums[i];
-        }
-
-        j = 0;
-        for(int i = 0; i < right.length; i++) {
-            nums[j++] = right[i];
-        }
-        for(int i = 0; i < left.length; i++) {
-            nums[j++] = left[i];
-        }
+        Solution.reverse(nums, 0, nums.length - 1);
+        Solution.reverse(nums, 0, k - 1);
+        Solution.reverse(nums, k, nums.length - 1);
 
         return ;
+    }
+
+    public static void reverse(int[] arr, int start, int end){
+        while(start < end){
+            int temp = arr[start];
+            arr[start] = arr[end];
+            arr[end] = temp;
+            start++;
+            end--;
+        }
+
     }
 }
