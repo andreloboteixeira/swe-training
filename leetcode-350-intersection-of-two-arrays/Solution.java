@@ -24,30 +24,30 @@ public class Solution{
 
     }
 
-    // t: O(max(m, n)), s: O(max(m,n))
+    // t: O(n + m), s: O(1)
+    // assumption that nums1 and nums2 are sorted
     public static int[] intersect(int[] nums1, int[] nums2) {
         if(nums1.length == 0 || nums2.length == 0) return new int[0];
+        Arrays.sort(nums1);
+        Arrays.sort(nums2);
 
         List<Integer> res = new ArrayList<Integer>();
 
-        Map<Integer, Integer> freq1 = new HashMap<Integer, Integer>();
-
-        for(int p1 = 0; p1 < nums1.length; p1++){
-            if(freq1.containsKey(nums1[p1])){
-                freq1.put(nums1[p1], freq1.get(nums1[p1]) + 1);
-            } else{
-                freq1.put(nums1[p1], 1);
-            }
-        }
-
-        for(int p2 = 0; p2 < nums2.length; p2++){
-            if(freq1.containsKey(nums2[p2]) && freq1.get(nums2[p2]) > 0){
-                    res.add(nums2[p2]);
-                    freq1.put(nums2[p2], freq1.get(nums2[p2]) - 1);
+        int p1 = 0, p2 = 0;
+        while(p1 < nums1.length && p2 < nums2.length){
+            if(nums1[p1] < nums2[p2]){
+                p1++;
+            } else if(nums1[p1] > nums2[p2]) {
+                p2++;
+            } else {
+                res.add(nums1[p1]);
+                p1++;
+                p2++;
             }
         }
 
         return Solution.toArray(res);
+
     }
 
     public static int[] toArray(List<Integer> list){
