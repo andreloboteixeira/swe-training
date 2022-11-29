@@ -46,7 +46,7 @@ public class Solution{
 
     }
 
-    // t: O(m*n + m*n) + O(m*n), s: O(m*n + m*n) = O(m*n)
+    // t: O(m*n), s: O(m*n)
     public static int[][] matrixReshape(int[][] mat, int r, int c) {
         int m = mat.length, n = mat[0].length;
 
@@ -54,15 +54,16 @@ public class Solution{
 
         int[][] reshaped = new int[r][c];
 
-        int[] rowMajor = new int[m*n];
+        int currR = 0, currC = 0;
         for(int i = 0; i < m; i++){
             for(int j = 0; j < n; j++){
-                rowMajor[j + i*n] = mat[i][j];
+                reshaped[currR][currC] = mat[i][j];
+                currC++;
+                if(currC == c){
+                    currC = 0;
+                    currR++;
+                }
             }
-        }
-
-        for(int k = 0; k < m*n; k++){
-            reshaped[k/c][k%c] = rowMajor[k];
         }
 
         return reshaped;
