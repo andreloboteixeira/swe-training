@@ -5,6 +5,6 @@ package coding.problems.java;
 
 public class App {
     public static void main(String[] args) {
-
+        Leetcode1ProblemTwoSum.main(new String[]{});
     }
 }
