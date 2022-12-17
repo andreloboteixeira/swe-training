@@ -1,5 +1,7 @@
+package coding.problems.java;
+
 import java.util.*;
-public class Solution{
+public class Leetcode20ProblemValidParentheses{
 //    Given a string s containing just the characters '(', ')', '{', '}', '[' and ']',
 //    determine if the input string is valid.
 //
@@ -15,10 +17,10 @@ public class Solution{
 //    s consists of parentheses only '()[]{}'.
 
     public static void main(String[] args){
-        if(Solution.isValid("()") == true) System.out.println("Ex1 correct");
-        if(Solution.isValid("()[]{}") == true) System.out.println("Ex2 correct");
-        if(Solution.isValid("(]") == false) System.out.println("Ex3 correct");
-        if(Solution.isValid("){") == false) System.out.println("Ex4 correct");
+        if(Leetcode20ProblemValidParentheses.isValid("()") == true) System.out.println("Ex1 correct");
+        if(Leetcode20ProblemValidParentheses.isValid("()[]{}") == true) System.out.println("Ex2 correct");
+        if(Leetcode20ProblemValidParentheses.isValid("(]") == false) System.out.println("Ex3 correct");
+        if(Leetcode20ProblemValidParentheses.isValid("){") == false) System.out.println("Ex4 correct");
 
     }
 
