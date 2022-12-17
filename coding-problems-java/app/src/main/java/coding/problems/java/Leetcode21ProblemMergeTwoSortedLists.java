@@ -1,5 +1,7 @@
+package coding.problems.java;
+
 import java.util.*;
-public class Solution{
+public class Leetcode21ProblemMergeTwoSortedLists{
 //    You are given the heads of two sorted linked lists list1 and list2.
 //
 //    Merge the two lists in a one sorted list.
@@ -23,17 +25,17 @@ public class Solution{
         ex1List2.next.next = new ListNode(4);
 
         System.out.println("Ex1 my solution");
-        Solution.printList(Solution.mergeTwoLists(ex1List1, ex1List2));
+        Leetcode21ProblemMergeTwoSortedLists.printList(Leetcode21ProblemMergeTwoSortedLists.mergeTwoLists(ex1List1, ex1List2));
 
         ListNode ex2List1 = null;
         ListNode ex2List2 = null;
         System.out.println("Ex2 my solution");
-        Solution.printList(Solution.mergeTwoLists(ex2List1, ex2List2));
+        Leetcode21ProblemMergeTwoSortedLists.printList(Leetcode21ProblemMergeTwoSortedLists.mergeTwoLists(ex2List1, ex2List2));
 
         ListNode ex3List1 = null;
         ListNode ex3List2 = new ListNode(0);
         System.out.println("Ex3 my solution");
-        Solution.printList(Solution.mergeTwoLists(ex3List1, ex3List2));
+        Leetcode21ProblemMergeTwoSortedLists.printList(Leetcode21ProblemMergeTwoSortedLists.mergeTwoLists(ex3List1, ex3List2));
 
     }
 
