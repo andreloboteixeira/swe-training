@@ -1,0 +1,1 @@
+cd ./app/src/main/java/coding/problems/java/ && ./new-problem.sh <<NameHere>>
