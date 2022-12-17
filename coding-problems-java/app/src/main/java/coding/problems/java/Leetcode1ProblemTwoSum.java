@@ -1,5 +1,8 @@
+package coding.problems.java;
+
 import java.util.*;
-public class Solution{
+
+public class Leetcode1ProblemTwoSum{
 //    Given an array of integers nums and an integer target,
 //    return indices of the two numbers such that they add up to target.
 //
@@ -14,7 +17,7 @@ public class Solution{
 
         System.out.println("ex1Expected: ");
         System.out.println(Arrays.toString(ex1Expected));
-        ex1Res = Solution.twoSum(ex1Input, 9);
+        ex1Res = Leetcode1ProblemTwoSum.twoSum(ex1Input, 9);
         System.out.println("ex1 my anwer: ");
         System.out.println(Arrays.toString(ex1Res));
 
@@ -24,7 +27,7 @@ public class Solution{
 
         System.out.println("ex2Expected: ");
         System.out.println(Arrays.toString(ex2Expected));
-        ex2Res = Solution.twoSum(ex2Input, 6);
+        ex2Res = Leetcode1ProblemTwoSum.twoSum(ex2Input, 6);
         System.out.println("ex2 my anwer: ");
         System.out.println(Arrays.toString(ex2Res));
 
@@ -34,7 +37,7 @@ public class Solution{
 
         System.out.println("ex3Expected: ");
         System.out.println(Arrays.toString(ex3Expected));
-        ex3Res = Solution.twoSum(ex3Input, 6);
+        ex3Res = Leetcode1ProblemTwoSum.twoSum(ex3Input, 6);
         System.out.println("ex3 my anwer: ");
         System.out.println(Arrays.toString(ex3Res));
 
