@@ -1,5 +1,7 @@
+package coding.problems.java;
+
 import java.util.*;
-public class Solution{
+public class Leetcode206ProblemReverseLinkedList{
 //    Given the head of a singly linked list,
 //    reverse the list, and return the reversed list.
 
@@ -15,18 +17,18 @@ public class Solution{
         ex1Head.next.next.next.next = new ListNode(5);
 
         System.out.println("Ex1 my solution");
-        Solution.printList(Solution.reverseList(ex1Head));
+        Leetcode206ProblemReverseLinkedList.printList(Leetcode206ProblemReverseLinkedList.reverseList(ex1Head));
 
         ListNode ex2Head = new ListNode(1);
         ex2Head.next = new ListNode(2);
 
         System.out.println("Ex2 my solution");
-        Solution.printList(Solution.reverseList(ex2Head));
+        Leetcode206ProblemReverseLinkedList.printList(Leetcode206ProblemReverseLinkedList.reverseList(ex2Head));
 
         ListNode ex3Head = null;
 
         System.out.println("Ex3 my solution");
-        Solution.printList(Solution.reverseList(ex3Head));
+        Leetcode206ProblemReverseLinkedList.printList(Leetcode206ProblemReverseLinkedList.reverseList(ex3Head));
 
     }
 
