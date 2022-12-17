@@ -1,5 +1,7 @@
+package coding.problems.java;
+
 import java.util.*;
-public class Solution{
+public class Leetcode35ProblemSearchInsertPosition{
 //    Given a sorted array of distinct integers and a target value,
 //    return the index if the target is found. If not,
 //    return the index where it would be if it were inserted in order.
@@ -7,19 +9,19 @@ public class Solution{
 //    You must write an algorithm with O(log n) runtime complexity.
 
     public static void main(String[] args){
-        if(Solution.searchInsert(new int[]{1,3,5,6}, 5) == 2){
+        if(Leetcode35ProblemSearchInsertPosition.searchInsert(new int[]{1,3,5,6}, 5) == 2){
             System.out.println("Ex1 correct");
         }
 
-        if(Solution.searchInsert(new int[]{1,3,5,6}, 2) == 1){
+        if(Leetcode35ProblemSearchInsertPosition.searchInsert(new int[]{1,3,5,6}, 2) == 1){
             System.out.println("Ex2 correct");
         }
 
-        if(Solution.searchInsert(new int[]{1,3,5,6}, 7) == 4){
+        if(Leetcode35ProblemSearchInsertPosition.searchInsert(new int[]{1,3,5,6}, 7) == 4){
             System.out.println("Ex3 correct");
         }
 
-        if(Solution.searchInsert(new int[]{1,3,5,6}, 0) == 0){
+        if(Leetcode35ProblemSearchInsertPosition.searchInsert(new int[]{1,3,5,6}, 0) == 0){
             System.out.println("Ex4 correct");
         }
 
