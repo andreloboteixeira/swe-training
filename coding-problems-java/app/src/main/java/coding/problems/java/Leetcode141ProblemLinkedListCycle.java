@@ -1,5 +1,7 @@
+package coding.problems.java;
+
 import java.util.*;
-public class Solution{
+public class Leetcode141ProblemLinkedListCycle{
 //    Given head, the head of a linked list, determine if the linked list has a cycle in it.
 //
 //    There is a cycle in a linked list if there is some node in the list that can be reached
@@ -23,7 +25,7 @@ public class Solution{
         ex1Head.next.next = new ListNode(-4);
         ex1Head.next.next.next =  ex1Head.next; // pos 1 has cycle, linked to 2
 
-        if(Solution.hasCycle(ex1Head) == true){
+        if(Leetcode141ProblemLinkedListCycle.hasCycle(ex1Head) == true){
             System.out.println("Ex1 correct");
         }
 
@@ -32,21 +34,21 @@ public class Solution{
         ex2Head.next = new ListNode(2);
         ex2Head.next.next = ex2Head; // pos 0 has cycle, linked to 1
 
-        if(Solution.hasCycle(ex2Head) == true){
+        if(Leetcode141ProblemLinkedListCycle.hasCycle(ex2Head) == true){
             System.out.println("Ex2 correct");
         }
 
         // 1
         ListNode ex3Head = new ListNode(1); // no cycle
 
-        if(Solution.hasCycle(ex3Head) == false){
+        if(Leetcode141ProblemLinkedListCycle.hasCycle(ex3Head) == false){
             System.out.println("Ex3 correct");
         }
 
         // null case
         ListNode ex4Head = null; // no cycle
 
-        if(Solution.hasCycle(ex4Head) == false){
+        if(Leetcode141ProblemLinkedListCycle.hasCycle(ex4Head) == false){
             System.out.println("Ex4 correct");
         }
     }
