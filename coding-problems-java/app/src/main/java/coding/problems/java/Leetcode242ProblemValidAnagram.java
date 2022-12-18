@@ -1,5 +1,7 @@
+package coding.problems.java;
+
 import java.util.*;
-public class Solution{
+public class Leetcode242ProblemValidAnagram{
 //    Given two strings s and t,
 //    return true if t is an anagram of s,
 //    and false otherwise.
@@ -17,15 +19,15 @@ public class Solution{
 //    How would you adapt your solution to such a case?
 
     public static void main(String[] args){
-        if(Solution.isAnagram("anagram", "nagaram") == true) System.out.println("Ex1 correct");
+        if(Leetcode242ProblemValidAnagram.isAnagram("anagram", "nagaram") == true) System.out.println("Ex1 correct");
 
-        if(Solution.isAnagram("rat", "car") == false) System.out.println("Ex2 correct");
+        if(Leetcode242ProblemValidAnagram.isAnagram("rat", "car") == false) System.out.println("Ex2 correct");
 
-        if(Solution.isAnagram("ratata", "tarata") == true) System.out.println("Ex3 correct");
+        if(Leetcode242ProblemValidAnagram.isAnagram("ratata", "tarata") == true) System.out.println("Ex3 correct");
 
-        if(Solution.isAnagram("", "") == true) System.out.println("Ex4 correct");
+        if(Leetcode242ProblemValidAnagram.isAnagram("", "") == true) System.out.println("Ex4 correct");
 
-        if(Solution.isAnagram("a", "") == false) System.out.println("Ex5 correct");
+        if(Leetcode242ProblemValidAnagram.isAnagram("a", "") == false) System.out.println("Ex5 correct");
     }
 
     // t: O(m + n + const) = O(max(m,n)), s: O(1)
