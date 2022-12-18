@@ -1,6 +1,8 @@
+package coding.problems.java;
+
 import java.util.*;
 
-public class Solution{
+public class Leetcode75ProblemSortColors{
 //    Given an array nums with n objects colored red, white, or blue,
 //    sort them in-place so that objects of the same color are adjacent,
 //    with the colors in the order red, white, and blue.
@@ -37,7 +39,7 @@ public class Solution{
             System.out.printf("%d, ", val);
         }
 
-        Solution.sortColors(ex1Input);
+        Leetcode75ProblemSortColors.sortColors(ex1Input);
 
         System.out.println("\nMy solution:");
         for(int val: ex1Input) {
@@ -52,7 +54,7 @@ public class Solution{
             System.out.printf("%d, ", val);
         }
 
-        Solution.sortColors(ex2Input);
+        Leetcode75ProblemSortColors.sortColors(ex2Input);
 
         System.out.println("\nMy solution:");
         for(int val: ex2Input) {
