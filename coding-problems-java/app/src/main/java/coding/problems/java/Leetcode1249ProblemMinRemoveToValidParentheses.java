@@ -1,6 +1,8 @@
+package coding.problems.java;
+
 import java.util.*;
 
-public class Solution{
+public class Leetcode1249ProblemMinRemoveToValidParentheses{
 //    Given a string s of '(' , ')' and lowercase English characters.
 //
 //    Your task is to remove the minimum number of parentheses ( '(' or ')',
@@ -37,21 +39,21 @@ public class Solution{
 
 
     public static void main(String[] args){
-        String resEx1 = Solution.minRemoveToMakeValid("lee(t(c)o)de)");
+        String resEx1 = Leetcode1249ProblemMinRemoveToValidParentheses.minRemoveToMakeValid("lee(t(c)o)de)");
         System.out.println("Ex1 my res: ");
         System.out.println(resEx1);
         if(resEx1.equals("lee(t(c)o)de")){
             System.out.println("Ex1 correct");
         }
 
-        String resEx2 = Solution.minRemoveToMakeValid("a)b(c)d");
+        String resEx2 = Leetcode1249ProblemMinRemoveToValidParentheses.minRemoveToMakeValid("a)b(c)d");
         System.out.println("Ex2 my res: ");
         System.out.println(resEx2);
         if(resEx2.equals("ab(c)d")){
             System.out.println("Ex2 correct");
         }
 
-        String resEx3 = Solution.minRemoveToMakeValid("))((");
+        String resEx3 = Leetcode1249ProblemMinRemoveToValidParentheses.minRemoveToMakeValid("))((");
         System.out.println("Ex3 my res: ");
         System.out.println(resEx3);
         if(resEx3.equals("")){
