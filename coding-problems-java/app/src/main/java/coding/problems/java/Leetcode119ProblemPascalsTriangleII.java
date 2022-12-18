@@ -1,6 +1,8 @@
+package coding.problems.java;
+
 import java.util.*;
 
-public class Solution {
+public class Leetcode119ProblemPascalsTriangleII {
 //    Given an integer rowIndex, return the rowIndexth (0-indexed) row of the Pascal's triangle.
 //
 //    In Pascal's triangle, each number is the sum of the two numbers directly above it as shown:
@@ -26,7 +28,7 @@ public class Solution {
         System.out.println("\nExpected result: ");
         System.out.println(ex1ExpectedRes.toString());
 
-        ex1Res = Solution.getRow(ex1Input);
+        ex1Res = Leetcode119ProblemPascalsTriangleII.getRow(ex1Input);
 
         System.out.println("\nMy solution:");
         System.out.println(ex1Res.toString());
@@ -37,7 +39,7 @@ public class Solution {
         System.out.println("\nExpected result: ");
         System.out.println(ex2ExpectedRes.toString());
 
-        ex2Res = Solution.getRow(ex2Input);
+        ex2Res = Leetcode119ProblemPascalsTriangleII.getRow(ex2Input);
 
         System.out.println("\nMy solution:");
         System.out.println(ex2Res.toString());
@@ -48,7 +50,7 @@ public class Solution {
         System.out.println("\nExpected result: ");
         System.out.println(ex3ExpectedRes.toString());
 
-        ex3Res = Solution.getRow(ex3Input);
+        ex3Res = Leetcode119ProblemPascalsTriangleII.getRow(ex3Input);
 
         System.out.println("\nMy solution:");
         System.out.println(ex3Res.toString());
@@ -59,7 +61,7 @@ public class Solution {
         System.out.println("\nExpected result: ");
         System.out.println(ex4ExpectedRes.toString());
 
-        ex4Res = Solution.getRow(ex4Input);
+        ex4Res = Leetcode119ProblemPascalsTriangleII.getRow(ex4Input);
 
         System.out.println("\nMy solution:");
         System.out.println(ex4Res.toString());
