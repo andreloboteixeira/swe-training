@@ -1,5 +1,7 @@
+package coding.problems.java;
+
 import java.util.*;
-public class Solution{
+public class Leetcode232ProblemImplementQueueUsingStacks{
 
 //    Implement a first in first out (FIFO) queue using only two stacks.
 //    The implemented queue should support all the functions

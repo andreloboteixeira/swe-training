@@ -1,3 +1,5 @@
+package coding.problems.java;
+
 import java.util.*;
 
 public class MyQueue{
