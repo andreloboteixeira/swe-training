@@ -1,13 +1,15 @@
+package coding.problems.java;
+
 import java.util.*;
-public class Solution{
+public class Leetcode278ProblemFirstBadVersion{
 //    Constraints:
 //    1 <= bad <= n <= 2^31 - 1
     public static void main(String[] args){
-        if(Solution.firstBadVersion(5, new VersionControl(4)) == 4){
+        if(Leetcode278ProblemFirstBadVersion.firstBadVersion(5, new VersionControl(4)) == 4){
             System.out.println("Ex1 correct");
         }
 
-        if(Solution.firstBadVersion(1, new VersionControl(1)) == 1){
+        if(Leetcode278ProblemFirstBadVersion.firstBadVersion(1, new VersionControl(1)) == 1){
             System.out.println("Ex2 correct");
         }
 

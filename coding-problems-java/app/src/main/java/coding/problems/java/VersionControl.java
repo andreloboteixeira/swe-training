@@ -1,3 +1,5 @@
+package coding.problems.java;
+
 public class VersionControl {
     /* The isBadVersion API is defined in the parent class VersionControl.
       boolean isBadVersion(int version); */
