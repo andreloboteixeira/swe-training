@@ -1,3 +1,5 @@
+package coding.problems.java;
+
 import java.util.*;
 
 // t: O(1) in average for next and hasNext, every node will be placed once in stack and next can be called n times.

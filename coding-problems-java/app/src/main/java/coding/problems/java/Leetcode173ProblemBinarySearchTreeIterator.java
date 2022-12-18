@@ -1,5 +1,7 @@
+package coding.problems.java;
+
 import java.util.*;
-public class Solution{
+public class Leetcode173ProblemBinarySearchTreeIterator{
     public static void main(String[] args){
 
         // in order: 4 -> 2 -> 5 -> 1 -> 6 -> 3 -> 7
@@ -10,7 +12,7 @@ public class Solution{
                     new TreeNode(2, new TreeNode(4), new TreeNode(5)),
                     new TreeNode(3, new TreeNode(6), new TreeNode(7)));
 
-            Solution.testTraversingOrders(root);
+            Leetcode173ProblemBinarySearchTreeIterator.testTraversingOrders(root);
             return ;
         }
 
@@ -33,36 +35,36 @@ public class Solution{
 
     public static void testTraversingOrders(TreeNode root){
         System.out.println("InOrder:");
-        Solution.printInOrder(root);
+        Leetcode173ProblemBinarySearchTreeIterator.printInOrder(root);
 
         System.out.println("\n\nPreOrder:");
-        Solution.printPreOrder(root);
+        Leetcode173ProblemBinarySearchTreeIterator.printPreOrder(root);
 
         System.out.println("\n\nPostOrder:");
-        Solution.printPostOrder(root);
+        Leetcode173ProblemBinarySearchTreeIterator.printPostOrder(root);
     }
 
     public static void printInOrder(TreeNode node){
         if(node == null) return ;
 
-        Solution.printInOrder(node.left);
+        Leetcode173ProblemBinarySearchTreeIterator.printInOrder(node.left);
         System.out.printf("\n Node: %d", node.val);
-        Solution.printInOrder(node.right);
+        Leetcode173ProblemBinarySearchTreeIterator.printInOrder(node.right);
     }
 
     public static void printPreOrder(TreeNode node){
         if(node == null) return ;
 
         System.out.printf("\n Node: %d", node.val);
-        Solution.printPreOrder(node.left);
-        Solution.printPreOrder(node.right);
+        Leetcode173ProblemBinarySearchTreeIterator.printPreOrder(node.left);
+        Leetcode173ProblemBinarySearchTreeIterator.printPreOrder(node.right);
     }
 
     public static void printPostOrder(TreeNode node){
         if(node == null) return ;
 
-        Solution.printPostOrder(node.left);
-        Solution.printPostOrder(node.right);
+        Leetcode173ProblemBinarySearchTreeIterator.printPostOrder(node.left);
+        Leetcode173ProblemBinarySearchTreeIterator.printPostOrder(node.right);
         System.out.printf("\n Node: %d", node.val);
     }
 }
