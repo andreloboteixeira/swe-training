@@ -1,5 +1,7 @@
+package coding.problems.java;
+
 import java.util.*;
-public class Solution{
+public class Leetcode344ProblemReverseString{
 
 //    Write a function that reverses a string. The input string is given as an array of characters s.
 //
@@ -13,12 +15,12 @@ public class Solution{
     public static void main(String[] args){
         char[] ex1Input = new char[]{'h','e','l','l','o'};
         String ex1Expected = new String(new char[]{'o','l','l','e','h'});
-        Solution.reverseString(ex1Input);
+        Leetcode344ProblemReverseString.reverseString(ex1Input);
         if((new String(ex1Input)).equals(ex1Expected)) System.out.println("Ex1 correct");
 
         char[] ex2Input = new char[]{'H','a','n','n','a','h'};
         String ex2Expected = new String(new char[]{'h','a','n','n','a','H'});
-        Solution.reverseString(ex2Input);
+        Leetcode344ProblemReverseString.reverseString(ex2Input);
         if((new String(ex2Input)).equals(ex2Expected)) System.out.println("Ex2 correct");
 
     }
