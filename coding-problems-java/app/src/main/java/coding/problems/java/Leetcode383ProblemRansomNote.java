@@ -1,5 +1,7 @@
+package coding.problems.java;
+
 import java.util.*;
-public class Solution{
+public class Leetcode383ProblemRansomNote{
 
 //    Given two strings ransomNote and magazine,
 //    return true if ransomNote can be constructed by using the letters from magazine and false otherwise.
@@ -12,9 +14,9 @@ public class Solution{
 //    ransomNote and magazine consist of lowercase English letters.
 
     public static void main(String[] args){
-        if(Solution.canConstruct("a","b") == false) System.out.println("Ex1 correct");
-        if(Solution.canConstruct("aa", "ab") == false) System.out.println("Ex2 correct");
-        if(Solution.canConstruct("aa", "aab") == true) System.out.println("Ex3 correct");
+        if(Leetcode383ProblemRansomNote.canConstruct("a","b") == false) System.out.println("Ex1 correct");
+        if(Leetcode383ProblemRansomNote.canConstruct("aa", "ab") == false) System.out.println("Ex2 correct");
+        if(Leetcode383ProblemRansomNote.canConstruct("aa", "aab") == true) System.out.println("Ex3 correct");
 
     }
 
