@@ -1,5 +1,7 @@
+package coding.problems.java;
+
 import java.util.*;
-public class Solution{
+public class Leetcode977ProblemSquaresOfSortedArray{
 //    Given an integer array nums sorted in non-decreasing order,
 //    return an array of the squares of each number sorted in non-decreasing order.
 
@@ -15,7 +17,7 @@ public class Solution{
 
         System.out.println("ex1Expected: ");
         System.out.println(Arrays.toString(ex1Expected));
-        ex1Res = Solution.sortedSquares(ex1Input);
+        ex1Res = Leetcode977ProblemSquaresOfSortedArray.sortedSquares(ex1Input);
         System.out.println("ex1 my anwer: ");
         System.out.println(Arrays.toString(ex1Res));
 
@@ -26,7 +28,7 @@ public class Solution{
 
         System.out.println("ex2Expected: ");
         System.out.println(Arrays.toString(ex2Expected));
-        ex2Res = Solution.sortedSquares(ex2Input);
+        ex2Res = Leetcode977ProblemSquaresOfSortedArray.sortedSquares(ex2Input);
         System.out.println("ex2 my anwer: ");
         System.out.println(Arrays.toString(ex2Res));
 
@@ -36,7 +38,7 @@ public class Solution{
 
         System.out.println("ex3Expected: ");
         System.out.println(Arrays.toString(ex3Expected));
-        ex3Res = Solution.sortedSquares(ex3Input);
+        ex3Res = Leetcode977ProblemSquaresOfSortedArray.sortedSquares(ex3Input);
         System.out.println("ex3 my anwer: ");
         System.out.println(Arrays.toString(ex3Res));
 
@@ -46,7 +48,7 @@ public class Solution{
 
         System.out.println("ex4Expected: ");
         System.out.println(Arrays.toString(ex4Expected));
-        ex4Res = Solution.sortedSquares(ex4Input);
+        ex4Res = Leetcode977ProblemSquaresOfSortedArray.sortedSquares(ex4Input);
         System.out.println("ex4 my anwer: ");
         System.out.println(Arrays.toString(ex4Res));
 
@@ -56,7 +58,7 @@ public class Solution{
 
         System.out.println("ex5Expected: ");
         System.out.println(Arrays.toString(ex5Expected));
-        ex5Res = Solution.sortedSquares(ex5Input);
+        ex5Res = Leetcode977ProblemSquaresOfSortedArray.sortedSquares(ex5Input);
         System.out.println("ex5 my anwer: ");
         System.out.println(Arrays.toString(ex5Res));
 
@@ -66,7 +68,7 @@ public class Solution{
 
         System.out.println("ex6Expected: ");
         System.out.println(Arrays.toString(ex6Expected));
-        ex6Res = Solution.sortedSquares(ex6Input);
+        ex6Res = Leetcode977ProblemSquaresOfSortedArray.sortedSquares(ex6Input);
         System.out.println("ex6 my anwer: ");
         System.out.println(Arrays.toString(ex6Res));
     }
