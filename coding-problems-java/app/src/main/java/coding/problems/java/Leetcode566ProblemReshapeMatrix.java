@@ -1,5 +1,7 @@
+package coding.problems.java;
+
 import java.util.*;
-public class Solution{
+public class Leetcode566ProblemReshapeMatrix{
 
 //    In MATLAB, there is a handy function called reshape which can reshape
 //    an m x n matrix into a new one with a different size r x c keeping its original data.
@@ -23,21 +25,21 @@ public class Solution{
 
     public static void main(String[] args){
 
-        int[][] ex1Res = Solution.matrixReshape(new int[][]{{1,2},{3,4}}, 1, 4);
+        int[][] ex1Res = Leetcode566ProblemReshapeMatrix.matrixReshape(new int[][]{{1,2},{3,4}}, 1, 4);
         System.out.println("Ex1 my solution");
         for(int i = 0; i < ex1Res.length; i++){
             System.out.println(Arrays.toString(ex1Res[i]));
         }
         System.out.println("\n");
 
-        int[][] ex2Res = Solution.matrixReshape(new int[][]{{1,2},{3,4}}, 2, 4);
+        int[][] ex2Res = Leetcode566ProblemReshapeMatrix.matrixReshape(new int[][]{{1,2},{3,4}}, 2, 4);
         System.out.println("Ex2 my solution");
         for(int i = 0; i < ex2Res.length; i++){
             System.out.println(Arrays.toString(ex2Res[i]));
         }
         System.out.println("\n");
 
-        int[][] ex3Res = Solution.matrixReshape(new int[][]{{1,2,3,4},{5,6,7,8}, {5,6,7,8}}, 2, 6);
+        int[][] ex3Res = Leetcode566ProblemReshapeMatrix.matrixReshape(new int[][]{{1,2,3,4},{5,6,7,8}, {5,6,7,8}}, 2, 6);
         System.out.println("Ex3 my solution");
         for(int i = 0; i < ex3Res.length; i++){
             System.out.println(Arrays.toString(ex3Res[i]));
