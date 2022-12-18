@@ -1,5 +1,7 @@
+package coding.problems.java;
+
 import java.util.*;
-public class Solution{
+public class Leetcode290ProblemWordPattern{
 //    Given a pattern and a string s,
 //    find if s follows the same pattern.
 //
@@ -31,10 +33,10 @@ public class Solution{
 //    All the words in s are separated by a single space.
 
     public static void main(String[] args){
-        if(Solution.wordPattern("abba", "dog cat cat dog") == true) System.out.println("ex1 correct");
-        if(Solution.wordPattern("abba", "dog cat cat fish") == false) System.out.println("ex2 correct");
-        if(Solution.wordPattern("aaaa", "dog cat cat dog") == false) System.out.println("ex3 correct");
-        if(Solution.wordPattern("abba", "dog dog dog dog") == false) System.out.println("ex4 correct");
+        if(Leetcode290ProblemWordPattern.wordPattern("abba", "dog cat cat dog") == true) System.out.println("ex1 correct");
+        if(Leetcode290ProblemWordPattern.wordPattern("abba", "dog cat cat fish") == false) System.out.println("ex2 correct");
+        if(Leetcode290ProblemWordPattern.wordPattern("aaaa", "dog cat cat dog") == false) System.out.println("ex3 correct");
+        if(Leetcode290ProblemWordPattern.wordPattern("abba", "dog dog dog dog") == false) System.out.println("ex4 correct");
 
     }
 
