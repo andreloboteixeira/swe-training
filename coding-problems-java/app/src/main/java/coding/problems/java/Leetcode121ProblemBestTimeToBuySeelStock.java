@@ -1,12 +1,14 @@
+package coding.problems.java;
+
 import java.util.*;
-public class Solution{
+public class Leetcode121ProblemBestTimeToBuySeelStock{
     public static void main(String[] args){
 
-        if(Solution.maxProfit(new int[]{7,1,5,3,6,4}) == 5){
+        if(Leetcode121ProblemBestTimeToBuySeelStock.maxProfit(new int[]{7,1,5,3,6,4}) == 5){
             System.out.println("Ex1 correct");
         }
 
-        if(Solution.maxProfit(new int[]{7,6,4,3,1}) == 0){
+        if(Leetcode121ProblemBestTimeToBuySeelStock.maxProfit(new int[]{7,6,4,3,1}) == 0){
             System.out.println("Ex2 correct");
         }
 
