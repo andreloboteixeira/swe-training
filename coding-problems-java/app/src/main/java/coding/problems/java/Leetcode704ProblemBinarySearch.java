@@ -1,5 +1,7 @@
+package coding.problems.java;
+
 import java.util.*;
-public class Solution{
+public class Leetcode704ProblemBinarySearch{
 //    Constraints:
 //    1 <= nums.length <= 104
 //    -104 < nums[i], target < 104
@@ -7,11 +9,11 @@ public class Solution{
 //    nums is sorted in ascending order.
     public static void main(String[] args){
 
-        if(Solution.search(new int[]{-1,0,3,5,9,12}, 9) == 4){
+        if(Leetcode704ProblemBinarySearch.search(new int[]{-1,0,3,5,9,12}, 9) == 4){
             System.out.println("Ex1 correct");
         }
 
-        if(Solution.search(new int[]{-1,0,3,5,9,12}, 2) == -1){
+        if(Leetcode704ProblemBinarySearch.search(new int[]{-1,0,3,5,9,12}, 2) == -1){
             System.out.println("Ex2 correct");
         }
 
