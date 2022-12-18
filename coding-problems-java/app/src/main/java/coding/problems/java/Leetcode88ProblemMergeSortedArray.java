@@ -1,5 +1,7 @@
+package coding.problems.java;
+
 import java.util.*;
-public class Solution{
+public class Leetcode88ProblemMergeSortedArray{
 //    You are given two integer arrays nums1 and nums2,
 //    sorted in non-decreasing order, and two integers m and n,
 //    representing the number of elements in nums1 and nums2 respectively.
@@ -26,7 +28,7 @@ public class Solution{
         System.out.println("Ex1 expected:");
         System.out.println(Arrays.toString(new int[]{1,2,2,3,5,6}));
 
-        Solution.merge(ex1Input, 3, new int[]{2, 5, 6}, 3);
+        Leetcode88ProblemMergeSortedArray.merge(ex1Input, 3, new int[]{2, 5, 6}, 3);
 
         System.out.println("Ex1 my solution:");
         System.out.println(Arrays.toString(ex1Input));
@@ -36,7 +38,7 @@ public class Solution{
         System.out.println("Ex2 expected:");
         System.out.println(Arrays.toString(new int[]{1}));
 
-        Solution.merge(ex2Input, 1, new int[0], 0);
+        Leetcode88ProblemMergeSortedArray.merge(ex2Input, 1, new int[0], 0);
 
         System.out.println("Ex2 my solution:");
         System.out.println(Arrays.toString(ex2Input));
@@ -46,7 +48,7 @@ public class Solution{
         System.out.println("Ex3 expected:");
         System.out.println(Arrays.toString(new int[]{1}));
 
-        Solution.merge(ex3Input, 0, new int[]{1}, 1);
+        Leetcode88ProblemMergeSortedArray.merge(ex3Input, 0, new int[]{1}, 1);
 
         System.out.println("Ex3 my solution:");
         System.out.println(Arrays.toString(ex3Input));
