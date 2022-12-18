@@ -1,5 +1,7 @@
+package coding.problems.java;
+
 import java.util.*;
-public class Solution{
+public class Leetcode74Search2DMatrix{
 //    Write an efficient algorithm that searches
 //    for a value target in an m x n integer matrix matrix.
 //    This matrix has the following properties:
@@ -15,11 +17,11 @@ public class Solution{
 //    -10^4 <= matrix[i][j], target <= 10^4
 
     public static void main(String[] args){
-        if(Solution.searchMatrix(new int[][]{{1,3,5,7},{10,11,16,20},{23,30,34,60}}, 3) == true){
+        if(Leetcode74Search2DMatrix.searchMatrix(new int[][]{{1,3,5,7},{10,11,16,20},{23,30,34,60}}, 3) == true){
             System.out.println("Ex1 correct");
         }
 
-        if(Solution.searchMatrix(new int[][]{{1,3,5,7},{10,11,16,20},{23,30,34,60}}, 13) == false){
+        if(Leetcode74Search2DMatrix.searchMatrix(new int[][]{{1,3,5,7},{10,11,16,20},{23,30,34,60}}, 13) == false){
             System.out.println("Ex2 correct");
         }
 
