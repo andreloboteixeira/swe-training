@@ -1,6 +1,8 @@
+package coding.problems.java;
+
 import java.util.*;
 
-public class Solution {
+public class Leetcode59ProblemSpiralMatrix {
 //		Given a positive integer n,
 //		generate an n x n matrix filled with elements from 1 to n2 in spiral order.
 //
@@ -22,7 +24,7 @@ public class Solution {
 
 			System.out.printf("For n = %d\n", n);
 			System.out.println("My sol:");
-			int [][] res = Solution.generateMatrix(n);
+			int [][] res = Leetcode59ProblemSpiralMatrix.generateMatrix(n);
 			for(int i = 0; i < res.length; i++){
 				System.out.println(Arrays.toString(res[i]));
 			}
