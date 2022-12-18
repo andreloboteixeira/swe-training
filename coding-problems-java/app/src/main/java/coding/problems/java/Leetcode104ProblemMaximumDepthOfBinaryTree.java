@@ -1,5 +1,7 @@
+package coding.problems.java;
+
 import java.util.*;
-public class Solution{
+public class Leetcode104ProblemMaximumDepthOfBinaryTree{
 
 //    Given the root of a binary tree, return its maximum depth.
 //
@@ -12,18 +14,18 @@ public class Solution{
 
     public static void main(String[] args){
         TreeNode ex1Root = new TreeNode(3, new TreeNode(9), new TreeNode(20, new TreeNode(15), new TreeNode(7)));
-        if(Solution.maxDepth(ex1Root) == 3) System.out.println("Ex1 correct");
+        if(Leetcode104ProblemMaximumDepthOfBinaryTree.maxDepth(ex1Root) == 3) System.out.println("Ex1 correct");
 
         TreeNode ex2Root = new TreeNode(1, null, new TreeNode(2));
-        if(Solution.maxDepth(ex2Root) == 2) System.out.println("Ex2 correct");
+        if(Leetcode104ProblemMaximumDepthOfBinaryTree.maxDepth(ex2Root) == 2) System.out.println("Ex2 correct");
     }
 
     // t: O(n), s: O(1)
     public static int maxDepth(TreeNode root) {
         if(root == null) return 0;
 
-        int leftSize = Solution.maxDepth(root.left);
-        int rightSize = Solution.maxDepth(root.right);
+        int leftSize = Leetcode104ProblemMaximumDepthOfBinaryTree.maxDepth(root.left);
+        int rightSize = Leetcode104ProblemMaximumDepthOfBinaryTree.maxDepth(root.right);
 
         return Integer.max(leftSize, rightSize) + 1;
     }
