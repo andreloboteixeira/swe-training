@@ -1,6 +1,8 @@
+package coding.problems.java;
+
 import java.util.*;
 
-public class Solution {
+public class Leetcode160ProblemIntersectionTwoLinkedLists {
 
     public static void main(String[] args){
 
@@ -18,7 +20,7 @@ public class Solution {
         listBEx1.next.next = new ListNode(1);
         listBEx1.next.next.next = intersectionEx1;
 
-        ListNode res1 = Solution.getIntersectionNode(listAEx1, listBEx1);
+        ListNode res1 = Leetcode160ProblemIntersectionTwoLinkedLists.getIntersectionNode(listAEx1, listBEx1);
         System.out.println("My answer, intersection node value: ");
         System.out.println(res1 != null ? res1.val : null);
 
@@ -30,7 +32,7 @@ public class Solution {
         ListNode listBEx3 = new ListNode(1);
         listBEx3.next = new ListNode(5);
 
-        ListNode res3 = Solution.getIntersectionNode(listAEx3, listBEx3);
+        ListNode res3 = Leetcode160ProblemIntersectionTwoLinkedLists.getIntersectionNode(listAEx3, listBEx3);
         System.out.println("My answer, intersection node value: ");
         System.out.println(res3 != null ? res3.val : null);
 
