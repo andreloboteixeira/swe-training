@@ -1,5 +1,7 @@
+package coding.problems.java;
+
 import java.util.*;
-public class Solution{
+public class Leetcode118ProblemPascalsTriangle{
 //    Given an integer numRows,
 //    return the first numRows of Pascal's triangle.
 //
@@ -9,13 +11,13 @@ public class Solution{
     public static void main(String[] args){
 
         System.out.println("Ex1 my solution");
-        for(List<Integer> list: Solution.generate(5)){
+        for(List<Integer> list: Leetcode118ProblemPascalsTriangle.generate(5)){
             for(Integer el: list) System.out.printf("%d, ", el);
             System.out.println("");
         }
 
         System.out.println("Ex2 my solution");
-        for(List<Integer> list: Solution.generate(1)){
+        for(List<Integer> list: Leetcode118ProblemPascalsTriangle.generate(1)){
             for(Integer el: list) System.out.printf("%d, ", el);
             System.out.println("");
         }
