@@ -1,17 +1,19 @@
+package coding.problems.java;
+
 import java.util.*;
-public class Solution{
+public class Leetcode217ProblemContainsDuplicate{
     public static void main(String[] args){
 
-        if(Solution.containsDuplicate(new int[]{1,2,3,1}) == true){
+        if(Leetcode217ProblemContainsDuplicate.containsDuplicate(new int[]{1,2,3,1}) == true){
             System.out.println("Ex1 correct");
 
         }
 
-        if(Solution.containsDuplicate(new int[]{1,2,3,4}) == false){
+        if(Leetcode217ProblemContainsDuplicate.containsDuplicate(new int[]{1,2,3,4}) == false){
             System.out.println("Ex2 correct");
         }
 
-        if(Solution.containsDuplicate(new int[]{1,1,1,3,3,4,3,2,4,2}) == true){
+        if(Leetcode217ProblemContainsDuplicate.containsDuplicate(new int[]{1,1,1,3,3,4,3,2,4,2}) == true){
             System.out.println("Ex3 correct");
         }
 
