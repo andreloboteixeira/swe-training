@@ -1,5 +1,7 @@
+package coding.problems.java;
+
 import java.util.*;
-public class Solution{
+public class Leetcode203ProblemRemoveLinkedListElements{
 //    Given the head of a linked list and an integer val,
 //    remove all the nodes of the linked list that has Node.val == val, and return the new head.
 //
@@ -18,25 +20,25 @@ public class Solution{
         ex1Head.next.next.next.next.next = new ListNode(5);
         ex1Head.next.next.next.next.next.next = new ListNode(6);
         System.out.println("Ex1 my solution");
-        Solution.printList(Solution.removeElements(ex1Head, 6));
+        Leetcode203ProblemRemoveLinkedListElements.printList(Leetcode203ProblemRemoveLinkedListElements.removeElements(ex1Head, 6));
 
         ListNode ex2Head = null;
         System.out.println("Ex2 my solution");
-        Solution.printList(Solution.removeElements(ex2Head, 1));
+        Leetcode203ProblemRemoveLinkedListElements.printList(Leetcode203ProblemRemoveLinkedListElements.removeElements(ex2Head, 1));
 
         ListNode ex3Head = new ListNode(7);
         ex3Head.next = new ListNode(7);
         ex3Head.next.next = new ListNode(7);
         ex3Head.next.next.next = new ListNode(7);
         System.out.println("Ex3 my solution");
-        Solution.printList(Solution.removeElements(ex3Head, 7));
+        Leetcode203ProblemRemoveLinkedListElements.printList(Leetcode203ProblemRemoveLinkedListElements.removeElements(ex3Head, 7));
 
         ListNode ex4Head = new ListNode(1);
         ex4Head.next = new ListNode(2);
         ex4Head.next.next = new ListNode(2);
         ex4Head.next.next.next = new ListNode(1);
         System.out.println("Ex4 my solution");
-        Solution.printList(Solution.removeElements(ex4Head, 2));
+        Leetcode203ProblemRemoveLinkedListElements.printList(Leetcode203ProblemRemoveLinkedListElements.removeElements(ex4Head, 2));
     }
 
     public static ListNode removeElements(ListNode head, int val) {
