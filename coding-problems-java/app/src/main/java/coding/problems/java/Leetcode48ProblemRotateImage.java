@@ -1,4 +1,6 @@
-public class Solution {
+package coding.problems.java;
+
+public class Leetcode48ProblemRotateImage {
 //    You are given an n x n 2D matrix representing an image,
 //    rotate the image by 90 degrees (clockwise).
 //
@@ -39,7 +41,7 @@ public class Solution {
             System.out.printf("\n");
         }
 
-        Solution.rotate(ex1Input);
+        Leetcode48ProblemRotateImage.rotate(ex1Input);
 
         System.out.println("\nMy solution:");
         for(int[] row: ex1Input) {
@@ -56,7 +58,7 @@ public class Solution {
             System.out.printf("\n");
         }
 
-        Solution.rotate(ex2Input);
+        Leetcode48ProblemRotateImage.rotate(ex2Input);
 
         System.out.println("\nMy solution:");
         for(int[] row: ex2Input) {
