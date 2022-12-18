@@ -1,6 +1,8 @@
+package coding.problems.java;
+
 import java.util.*;
 
-public class Solution{
+public class Leetcode108ProblemConvertSortedArraryToBinarySearchTree{
 //    Given an integer array nums where the elements are sorted in ascending order,
 //    convert it to a height-balanced binary search tree.
 //
@@ -27,15 +29,15 @@ public class Solution{
 
         int[] arrayEx1 = new int[]{-10,-3,0,5,9};
 
-        TreeNode resEx1 = Solution.sortedArrayToBST(arrayEx1);
-        Solution.printBST(resEx1);
+        TreeNode resEx1 = Leetcode108ProblemConvertSortedArraryToBinarySearchTree.sortedArrayToBST(arrayEx1);
+        Leetcode108ProblemConvertSortedArraryToBinarySearchTree.printBST(resEx1);
 
     }
 
     // t: O(n), s: stack O(logn)
     public static TreeNode sortedArrayToBST(int[] nums) {
 
-        return Solution.arrToBST(nums, 0, nums.length - 1);
+        return Leetcode108ProblemConvertSortedArraryToBinarySearchTree.arrToBST(nums, 0, nums.length - 1);
     }
 
     public static TreeNode arrToBST(int[] arr, int start, int end){
