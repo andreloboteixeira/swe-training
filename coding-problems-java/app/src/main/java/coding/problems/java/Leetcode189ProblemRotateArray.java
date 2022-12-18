@@ -1,5 +1,7 @@
+package coding.problems.java;
+
 import java.util.*;
-public class Solution{
+public class Leetcode189ProblemRotateArray{
 //    Given an array, rotate the array to the right by k steps,
 //    where k is non-negative.
 //
@@ -20,7 +22,7 @@ public class Solution{
         System.out.println("Ex1 expected:");
         System.out.println(Arrays.toString(new int[]{5,6,7,1,2,3,4}));
 
-        Solution.rotate(ex1Input, 3);
+        Leetcode189ProblemRotateArray.rotate(ex1Input, 3);
 
         System.out.println("Ex1 my solution:");
         System.out.println(Arrays.toString(ex1Input));
@@ -30,7 +32,7 @@ public class Solution{
         System.out.println("Ex2 expected:");
         System.out.println(Arrays.toString(new int[]{3,99,-1,-100}));
 
-        Solution.rotate(ex2Input, 2);
+        Leetcode189ProblemRotateArray.rotate(ex2Input, 2);
         System.out.println("Ex2 my solution:");
         System.out.println(Arrays.toString(ex2Input));
 
@@ -41,9 +43,9 @@ public class Solution{
         k = k % nums.length;
         if(k == 0) return ;
 
-        Solution.reverse(nums, 0, nums.length - 1);
-        Solution.reverse(nums, 0, k - 1);
-        Solution.reverse(nums, k, nums.length - 1);
+        Leetcode189ProblemRotateArray.reverse(nums, 0, nums.length - 1);
+        Leetcode189ProblemRotateArray.reverse(nums, 0, k - 1);
+        Leetcode189ProblemRotateArray.reverse(nums, k, nums.length - 1);
 
         return ;
     }
