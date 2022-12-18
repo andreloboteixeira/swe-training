@@ -1,5 +1,7 @@
+package coding.problems.java;
+
 import java.util.*;
-public class Solution{
+public class Leetcode350IntersecationOfTwoArrays{
 //    Given two integer arrays nums1 and nums2,
 //    return an array of their intersection.
 //    Each element in the result must appear as many times
@@ -12,13 +14,13 @@ public class Solution{
     public static void main(String[] args){
         System.out.println("Ex1 expected");
         System.out.println(Arrays.toString(new int[]{2,2}));
-        int[] ex1Res = Solution.intersect(new int[]{1,2,2,1}, new int[]{2,2});
+        int[] ex1Res = Leetcode350IntersecationOfTwoArrays.intersect(new int[]{1,2,2,1}, new int[]{2,2});
         System.out.println("Ex1 my solution");
         System.out.println(Arrays.toString(ex1Res));
 
         System.out.println("Ex2 expected");
         System.out.println(Arrays.toString(new int[]{4,9}));
-        int[] ex2Res = Solution.intersect(new int[]{4,9,5}, new int[]{9,4,9,8,4});
+        int[] ex2Res = Leetcode350IntersecationOfTwoArrays.intersect(new int[]{4,9,5}, new int[]{9,4,9,8,4});
         System.out.println("Ex2 my solution");
         System.out.println(Arrays.toString(ex2Res));
 
@@ -46,7 +48,7 @@ public class Solution{
             }
         }
 
-        return Solution.toArray(res);
+        return Leetcode350IntersecationOfTwoArrays.toArray(res);
 
     }
 
