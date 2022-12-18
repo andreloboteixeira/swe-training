@@ -1,6 +1,8 @@
+package coding.problems.java;
+
 import java.util.*;
 
-public class Solution{
+public class Leetcode155MinStack{
     public static void main(String[] args){
 
         System.out.println("Ex1 my solution: ");
