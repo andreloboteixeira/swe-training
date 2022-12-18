@@ -1,5 +1,7 @@
+package coding.problems.java;
+
 import java.util.*;
-public class Solution{
+public class Leetcode83ProblemRemoveDuplicatesFromSortedList{
 
 //    Given the head of a sorted linked list,
 //    delete all duplicates such that each element appears only once.
@@ -17,7 +19,7 @@ public class Solution{
         ex1Head.next.next = new ListNode(2);
 
         System.out.println("ex1 my solution");
-        Solution.printList(Solution.deleteDuplicates(ex1Head));
+        Leetcode83ProblemRemoveDuplicatesFromSortedList.printList(Leetcode83ProblemRemoveDuplicatesFromSortedList.deleteDuplicates(ex1Head));
 
 
         ListNode ex2Head = new ListNode(1);
@@ -27,7 +29,7 @@ public class Solution{
         ex2Head.next.next.next.next = new ListNode(3);
 
         System.out.println("ex2 my solution");
-        Solution.printList(Solution.deleteDuplicates(ex2Head));
+        Leetcode83ProblemRemoveDuplicatesFromSortedList.printList(Leetcode83ProblemRemoveDuplicatesFromSortedList.deleteDuplicates(ex2Head));
 
     }
 
