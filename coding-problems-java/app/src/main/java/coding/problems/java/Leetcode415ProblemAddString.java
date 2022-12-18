@@ -1,4 +1,6 @@
-public class Solution{
+package coding.problems.java;
+
+public class Leetcode415ProblemAddString{
 //    Given two non-negative integers, num1 and num2 represented as string,
 //    return the sum of num1 and num2 as a string.
 //
@@ -31,25 +33,25 @@ public class Solution{
         System.out.println("Expected");
         System.out.println("134");
         System.out.println("My solution");
-        System.out.println(Solution.addStrings("11", "123"));
+        System.out.println(Leetcode415ProblemAddString.addStrings("11", "123"));
 
         System.out.println("\n\nEx2");
         System.out.println("Expected");
         System.out.println("533");
         System.out.println("My solution");
-        System.out.println(Solution.addStrings("456", "77"));
+        System.out.println(Leetcode415ProblemAddString.addStrings("456", "77"));
 
         System.out.println("\n\nEx3");
         System.out.println("Expected");
         System.out.println("0");
         System.out.println("My solution");
-        System.out.println(Solution.addStrings("0", "0"));
+        System.out.println(Leetcode415ProblemAddString.addStrings("0", "0"));
 
         System.out.println("\n\nEx4");
         System.out.println("Expected");
         System.out.println("1111111110");
         System.out.println("My solution");
-        System.out.println(Solution.addStrings("123456789", "987654321"));
+        System.out.println(Leetcode415ProblemAddString.addStrings("123456789", "987654321"));
 
     }
 
