@@ -1,6 +1,8 @@
+package coding.problems.java;
+
 import java.util.*;
 
-public class Solution {
+public class Leetcode56MergeIntervals {
 //    Given an array of intervals where intervals[i] = [starti, endi],
 //    merge all overlapping intervals,
 //    and return an array of the non-overlapping intervals that cover all the intervals in the input.
@@ -34,7 +36,7 @@ public class Solution {
             System.out.printf("[%d, %d]\n", interval[0], interval[1]);
         }
 
-        ex1Res = Solution.merge(ex1Input);
+        ex1Res = Leetcode56MergeIntervals.merge(ex1Input);
 
         System.out.println("\nMy solution:");
         for(int[] interval: ex1Res) {
@@ -49,7 +51,7 @@ public class Solution {
             System.out.printf("[%d, %d]\n", interval[0], interval[1]);
         }
 
-        ex2Res = Solution.merge(ex2Input);
+        ex2Res = Leetcode56MergeIntervals.merge(ex2Input);
 
         System.out.println("\nMy solution:");
         for(int[] interval: ex2Res) {
@@ -64,7 +66,7 @@ public class Solution {
             System.out.printf("[%d, %d]\n", interval[0], interval[1]);
         }
 
-        ex3Res = Solution.merge(ex3Input);
+        ex3Res = Leetcode56MergeIntervals.merge(ex3Input);
 
         System.out.println("\nMy solution:");
         for(int[] interval: ex3Res) {
