@@ -1,5 +1,7 @@
+package coding.problems.java;
+
 import java.util.*;
-public class Solution{
+public class Leetcode387ProblemFirstUniqueCharInAString{
 //    Given a string s, find the first non-repeating character in it and return its index.
 //    If it does not exist, return -1.
 
@@ -9,11 +11,11 @@ public class Solution{
 
     public static void main(String[] args){
 
-        if(Solution.firstUniqChar("leetcode") == 0) System.out.println("Ex1 correct");
+        if(Leetcode387ProblemFirstUniqueCharInAString.firstUniqChar("leetcode") == 0) System.out.println("Ex1 correct");
 
-        if(Solution.firstUniqChar("loveleetcode") == 2) System.out.println("Ex2 correct");
+        if(Leetcode387ProblemFirstUniqueCharInAString.firstUniqChar("loveleetcode") == 2) System.out.println("Ex2 correct");
 
-        if(Solution.firstUniqChar("aabb") == -1) System.out.println("Ex3 correct");
+        if(Leetcode387ProblemFirstUniqueCharInAString.firstUniqChar("aabb") == -1) System.out.println("Ex3 correct");
 
     }
 
