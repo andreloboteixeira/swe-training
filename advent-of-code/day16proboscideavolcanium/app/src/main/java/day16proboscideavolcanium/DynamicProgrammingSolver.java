@@ -1,24 +1,18 @@
 package day16proboscideavolcanium;
 
 import java.util.ArrayList;
-import java.util.LinkedList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.Collections;
-import java.util.stream.Collectors;
-import java.util.stream.Collectors;
-
-import day16proboscideavolcanium.InputReader.Input;
 
 public class DynamicProgrammingSolver {
 
     Input input;
     Map<Long, Integer> statesMaxPressure;
 
-    DinamicProgrammingSolver(Input input) {
+    DynamicProgrammingSolver(Input input) {
         this.input = input;
-        this.statesMaxPressure = new HashMap<Long, Integer>();
+        this.statesMaxPressure = new HashMap<>();
     }
 
     public Integer solve(String startingPosition, List<Boolean> openValves, Integer timeAvailable, Boolean isElephantPlaying){

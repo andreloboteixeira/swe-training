@@ -1,39 +1,28 @@
 package day16proboscideavolcanium;
 
-import java.util.*;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
-import java.util.stream.Collectors;
+import java.util.ArrayList;
+import java.util.List;
 
-import day16proboscideavolcanium.InputReader;
-import day16proboscideavolcanium.InputReader.Input;
+public class Input {
 
-public class InputReader {
+    public List<String> labels;
+    public List<Integer> flowRates;
+    public List<String[]> allEdgesLabels;
 
-    InputReader() {}
-
-    public static class Input{
-        public List<String> labels;
-        public List<Integer> flowRates;
-        public List<String[]> allEdgesLabels;
-
-        Input(List<String> labels, List<Integer> flowRates, List<String[]> allEdgesLabels){
-            this.labels = labels;
-            this.flowRates = flowRates;
-            this.allEdgesLabels = allEdgesLabels;
-        }
+    Input(){
+        this.labels = new ArrayList();
+        this.flowRates = new ArrayList();
+        this.allEdgesLabels = new ArrayList();
     }
 
-    public static Input readInputRound1DinamicProgramming() throws IOException {
+    public void readInputRound1DinamicProgramming() throws IOException {
         String fileName = "/Users/andreloboteixeira/coding/swe-training/advent-of-code/day16proboscideavolcanium/app/src/main/java/day16proboscideavolcanium/day16-input.txt";
 //        String fileName = "/Users/andreloboteixeira/coding/swe-training/advent-of-code/day16proboscideavolcanium/app/src/main/java/day16proboscideavolcanium/day16-input-test.txt";
 
-        Input result = null;
-
-        List<String> labels = new ArrayList();
-        List<Integer> flowRates = new ArrayList();
-        List<String[]> allEdgesLabels = new ArrayList();
+        System.out.println(">> Reading file " + fileName + " ...");
 
         BufferedReader br = null;
         try {
@@ -41,7 +30,6 @@ public class InputReader {
             br = new BufferedReader(new FileReader(fileName));
 
             String line;
-            // read file and create graph
             while ((line = br.readLine()) != null) {
                 String[] aux = line.split(";");
 
@@ -56,16 +44,27 @@ public class InputReader {
                 allEdgesLabels.add(edges);
             }
 
-            result = new Input(labels, flowRates, allEdgesLabels);
-
         } catch (IOException e) {
             e.printStackTrace();
         } finally {
             if (br != null) {
                 br.close();
             }
+            this.printInput();
         }
-//        System.out.println(result);
-        return result;
+
+    }
+
+    public void printInput(){
+        System.out.println(">> Print input");
+        for(int i = 0; i < labels.size(); i++){
+            System.out.println(labels.get(i) + ": " + flowRates.get(i));
+
+            for(String edge: allEdgesLabels.get(i)) {
+                System.out.print(edge + ", ");
+            }
+
+            System.out.print("\n\n");
+        }
     }
 }
