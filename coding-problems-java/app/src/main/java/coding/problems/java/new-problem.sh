@@ -3,9 +3,6 @@
 # $1 is "<PlatformName><RefNumber>Problem<ProblemName>".java
 NAME=$1
 
-git branch $NAME
-git checkout $NAME
-
 cat << EOF > $NAME.java
 package coding.problems.java;
 
